@@ -51,7 +51,9 @@ class Onbording extends StatelessWidget {
                 ),
               ),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/signingpage');
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.yellow, // Button color
                   shape: RoundedRectangleBorder(

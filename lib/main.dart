@@ -1,4 +1,5 @@
 import 'package:collegerates/screens/onbording.dart';
+import 'package:collegerates/screens/signingpage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,9 +11,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Onbording(),
+      home: const Onbording(),
+      routes: {
+        '/signingpage' :(context) => const Signingpage(),
+      },
     );
   }
 }

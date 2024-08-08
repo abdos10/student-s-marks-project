@@ -55,7 +55,7 @@ class Onbording extends StatelessWidget {
                   Navigator.pushNamed(context, '/signingpage');
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.yellow, // Button color
+                  backgroundColor: Colors.yellow, 
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
@@ -64,7 +64,7 @@ class Onbording extends StatelessWidget {
                   "Let's Go",
                   style: TextStyle(
                     color: Colors.black.withOpacity(0.8),
-                    fontWeight: FontWeight.bold, // Text color
+                    fontWeight: FontWeight.bold, 
                     fontSize: screenWidth * 0.07,
                   ),
                 ),

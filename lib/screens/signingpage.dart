@@ -1,5 +1,6 @@
 import 'package:collegerates/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class Signingpage extends StatelessWidget {
   const Signingpage({super.key});
@@ -9,8 +10,8 @@ class Signingpage extends StatelessWidget {
     final double screenHeight = MediaQuery.of(context).size.height;
     final double screenWidth = MediaQuery.of(context).size.width;
     // to access the username and university number
-    final TextEditingController name_controller= TextEditingController();
-    final TextEditingController uninumber_controller= TextEditingController();
+    final TextEditingController name_controller = TextEditingController();
+    final TextEditingController uninumber_controller = TextEditingController();
     return Scaffold(
       backgroundColor: Constants.c_white,
       body: Stack(
@@ -56,7 +57,9 @@ class Signingpage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(height: screenHeight * 0.15),
+                Lottie.asset('assets/animation2.json',
+                    width: screenWidth * 0.92, height: screenHeight * 0.42),
+                SizedBox(height: screenHeight * 0.03),
                 // texttt
                 Text(
                   textAlign: TextAlign.center,
@@ -64,7 +67,7 @@ class Signingpage extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.black, fontSize: screenWidth * 0.07),
                 ),
-                SizedBox(height: screenHeight * 0.07),
+                SizedBox(height: screenHeight * 0.06),
                 //the name text form
                 TextFormField(
                   controller: name_controller,
@@ -124,8 +127,27 @@ class Signingpage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(25)),
                   ),
                 ),
-              
-              
+                SizedBox(
+                  height: screenHeight * 0.05,
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.yellow,
+                    fixedSize: Size(screenWidth * 0.9, screenHeight * 0.06),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                  ),
+                  child: Text(
+                    "get your marks",
+                    style: TextStyle(
+                      color: Colors.black.withOpacity(0.8),
+                      fontWeight: FontWeight.bold,
+                      fontSize: screenWidth * 0.07,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

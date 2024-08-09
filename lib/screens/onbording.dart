@@ -17,10 +17,8 @@ class Onbording extends StatelessWidget {
           children: [
             SizedBox(height: screenHeight * 0.09),
             // lottie animation
-            Center(
-              child: Lottie.asset('assets/animation.json',
-                  width: screenWidth * 0.92, height: screenHeight * 0.42),
-            ),
+            Lottie.asset('assets/animation.json',
+                width: screenWidth * 0.92, height: screenHeight * 0.42),
             // welcome
             Text(
               'WELCOME!',
@@ -55,7 +53,7 @@ class Onbording extends StatelessWidget {
                   Navigator.pushNamed(context, '/signingpage');
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.yellow, 
+                  backgroundColor: Colors.yellow,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
@@ -64,7 +62,7 @@ class Onbording extends StatelessWidget {
                   "Let's Go",
                   style: TextStyle(
                     color: Colors.black.withOpacity(0.8),
-                    fontWeight: FontWeight.bold, 
+                    fontWeight: FontWeight.bold,
                     fontSize: screenWidth * 0.07,
                   ),
                 ),

@@ -16,6 +16,7 @@ class Signingpage extends StatelessWidget {
       backgroundColor: Constants.c_white,
       body: Stack(
         children: [
+          // the cercels 
           Positioned(
             top: screenHeight * 0.1,
             left: -screenWidth * 0.2,
@@ -52,11 +53,13 @@ class Signingpage extends StatelessWidget {
               ),
             ),
           ),
+          //actual content
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                //lottie animation
                 Lottie.asset('assets/animation2.json',
                     width: screenWidth * 0.92, height: screenHeight * 0.42),
                 SizedBox(height: screenHeight * 0.03),
@@ -130,6 +133,7 @@ class Signingpage extends StatelessWidget {
                 SizedBox(
                   height: screenHeight * 0.05,
                 ),
+                // button 
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
